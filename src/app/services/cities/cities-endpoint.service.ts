@@ -6,7 +6,10 @@ import { ICity } from "../../models/city.model";
 
 @Injectable()
 export class CitiesEndpoint extends BaseService {
-  constructor(private _httpClient: HttpClient, private _injector: Injector) {
+  constructor(
+    private readonly _httpClient: HttpClient,
+    private readonly _injector: Injector
+  ) {
     super(_httpClient, _injector);
   }
 

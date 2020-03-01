@@ -15,16 +15,12 @@ export class CitiesListComponent implements OnInit {
   city$: Observable<ICity>;
 
   constructor(
-    private _citiesService: CitiesService,
-    private _toastr: ToastrService
+    private readonly _citiesService: CitiesService,
+    private readonly _toastr: ToastrService
   ) {}
 
   ngOnInit() {
     this.getCities();
-  }
-
-  getCities() {
-    this.cities$ = this._citiesService.getAll();
   }
 
   onDeleteConfirm(id: number) {
@@ -39,5 +35,9 @@ export class CitiesListComponent implements OnInit {
 
   onDeleteCity(id: number) {
     this.city$ = this._citiesService.getCity(id);
+  }
+
+  private getCities() {
+    this.cities$ = this._citiesService.getCities();
   }
 }

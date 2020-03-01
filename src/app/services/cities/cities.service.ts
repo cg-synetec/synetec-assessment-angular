@@ -5,9 +5,9 @@ import { ICity } from "../../models/city.model";
 
 @Injectable()
 export class CitiesService {
-  constructor(private _citiesEndpoint: CitiesEndpoint) {}
+  constructor(private readonly _citiesEndpoint: CitiesEndpoint) {}
 
-  getAll(): Observable<ICity[]> {
+  getCities(): Observable<ICity[]> {
     return this._citiesEndpoint.getCities();
   }
 
