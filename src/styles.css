@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* helpers */
+.text--center {
+  text-align: center;
+}
+.toast {
+  opacity: 1;
+}
